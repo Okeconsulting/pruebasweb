@@ -36,4 +36,4 @@ jobs:
           echo "LOCAL_DIR=./" >> $GITHUB_ENV # Asegúrate de que coincida con tu estructura de archivos
 
       - name: Run custom FTP deploy script
-        run: python deploy_ftp.py # O python scripts/deploy_ftp.py si lo guardaste en una subcarpeta
+        run: python deployftp.py # O python scripts/deploy_ftp.py si lo guardaste en una subcarpeta
