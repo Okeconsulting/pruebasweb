@@ -127,8 +127,9 @@ if __name__ == "__main__":
 
     # Obtener patrones de exclusión de una variable de entorno, si existe
     # Los patrones deben estar separados por comas (,)
-    EXCLUDE_PATTERNS_STR = os.environ.get('EXCLUDE_PATTERNS', '')
-    EXCLUDE_PATTERNS = [p.strip() for p in EXCLUDE_PATTERNS_STR.split(',') if p.strip()]
+    #EXCLUDE_PATTERNS_STR = os.environ.get('EXCLUDE_PATTERNS', '')
+    #EXCLUDE_PATTERNS = [p.strip() for p in EXCLUDE_PATTERNS_STR.split(',') if p.strip()]
+    EXCLUDE_PATTERNS=None
 
     if not all([FTP_SERVER, FTP_USERNAME, FTP_PASSWORD]):
         print("Error: Las variables de entorno FTP_SERVER, FTP_USERNAME y FTP_PASSWORD deben estar configuradas.")
