@@ -2,7 +2,7 @@ import os
 from ftplib import FTP, error_perm
 import fnmatch # Para la coincidencia de patrones (glob-style)
 
-def deploy_ftp(server, username, password, local_dir, remote_path):
+def deploy_ftp(server, username, password, local_dir, remote_path,exclude_patterns=None):
 
     if exclude_patterns is None:
         exclude_patterns = []
