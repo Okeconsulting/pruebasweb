@@ -1,5 +1,6 @@
 import os
 from ftplib import FTP, error_perm
+import fnmatch # Para la coincidencia de patrones (glob-style)
 
 def deploy_ftp(server, username, password, local_dir, remote_path):
 
@@ -15,7 +16,8 @@ def deploy_ftp(server, username, password, local_dir, remote_path):
         '*.DS_Store',   # Archivos de macOS
         'Thumbs.db',    # Archivos de Windows
         '.env',         # Archivos de entorno (credenciales, etc.)
-        'deploy_ftp.py' # El propio script de despliegue
+        'deployftp.py', # El propio script de despliegue
+        'README.md' 
         ]
             # Combina los patrones por defecto con los que se pasen
         all_exclude_patterns = default_exclude_patterns + exclude_patterns
