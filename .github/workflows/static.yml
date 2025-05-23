@@ -1,4 +1,4 @@
-name: Deploy HTML via FTP
+name: Custom FTP Deploy
 
 on:
   push:
@@ -7,21 +7,33 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to FTP
+    name: Run Custom FTP Deploy Script
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Usa la versión más reciente
+        uses: actions/checkout@v4 # Obtener tu código
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy@v2.0.0 # Usa la versión más reciente si hay una disponible
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          # Opcional: Si tu servidor FTP usa un puerto diferente al 21
-          # port: ${{ secrets.FTP_PORT }}
-          # Opcional: El directorio remoto en el servidor FTP donde se subirán los archivos
-          # Puedes omitirlo si quieres subir a la raíz del usuario FTP
-          remote_path: ${{ secrets.FTP_BASE_DIR }} # Asegúrate de que este secreto exista si lo usas
+          python-version: '3.x' # Puedes especificar una versión específica como '3.9' o '3.10'
+
+      - name: Configure FTP environment variables
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          # Opcional: Si quieres subir a un subdirectorio en el FTP
+          FTP_REMOTE_PATH: ${{ secrets.FTP_REMOTE_PATH }} # Asegúrate de que este secreto exista
+          # Opcional: Si tus archivos HTML no están en la raíz de tu repositorio
+          LOCAL_DIR: ./ # Por ejemplo, si tus HTML están en una carpeta 'dist', sería 'dist/'
+        run: |
+          echo "FTP_SERVER=${{ secrets.FTP_SERVER }}" >> $GITHUB_ENV
+          echo "FTP_USERNAME=${{ secrets.FTP_USERNAME }}" >> $GITHUB_ENV
+          echo "FTP_PASSWORD=${{ secrets.FTP_PASSWORD }}" >> $GITHUB_ENV
+          echo "FTP_REMOTE_PATH=${{ secrets.FTP_REMOTE_PATH }}" >> $GITHUB_ENV
+          echo "LOCAL_DIR=./" >> $GITHUB_ENV # Asegúrate de que coincida con tu estructura de archivos
+
+      - name: Run custom FTP deploy script
+        run: python deploy_ftp.py # O python scripts/deploy_ftp.py si lo guardaste en una subcarpeta
