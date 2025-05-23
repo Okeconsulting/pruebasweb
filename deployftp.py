@@ -2,6 +2,40 @@ import os
 from ftplib import FTP, error_perm
 
 def deploy_ftp(server, username, password, local_dir, remote_path):
+
+    if exclude_patterns is None:
+        exclude_patterns = []
+
+        # Añadir patrones de exclusión comunes que probablemente no quieres desplegar
+        default_exclude_patterns = [
+        '.git/',        # Directorio de Git
+        '.github/',     # Directorio de GitHub Actions
+        '__pycache__/', # Caché de Python
+        '*.pyc',        # Archivos compilados de Python
+        '*.DS_Store',   # Archivos de macOS
+        'Thumbs.db',    # Archivos de Windows
+        '.env',         # Archivos de entorno (credenciales, etc.)
+        'deploy_ftp.py' # El propio script de despliegue
+        ]
+            # Combina los patrones por defecto con los que se pasen
+        all_exclude_patterns = default_exclude_patterns + exclude_patterns
+
+    # Función auxiliar para comprobar si un archivo/directorio debe ser excluido
+    def should_exclude(path, is_dir=False):
+        # Normaliza la ruta para comparación (usa '/' como separador)
+        normalized_path = path.replace("\\", "/")
+        if is_dir and not normalized_path.endswith('/'):
+            normalized_path += '/' # Asegura que los directorios terminen con '/' para las reglas
+
+        for pattern in all_exclude_patterns:
+            # Comprueba si la ruta coincide con el patrón
+            if fnmatch.fnmatch(normalized_path, pattern):
+                return True
+            # Si el patrón es un directorio (termina con /) y la ruta es un archivo dentro de ese directorio
+            if pattern.endswith('/') and normalized_path.startswith(pattern):
+                 return True
+        return False
+    
     ftp = None
     try:
         print(f"Conectando a FTP: {server}...")
