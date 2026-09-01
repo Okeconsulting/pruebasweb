@@ -3,23 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oke Consulting</title>
+    <title>Oke Consulting - Consultoría en Tecnología</title>
     <link rel="icon" href="/img/logo_ed3.ico" type="image/x-icon">
     <style>
         .btn .fa-solid, .btn .fa-brands {
-            margin-right: .5rem; /* Espacio entre icono y texto en botón */
+            margin-right: .5rem;
         }
-        .fa-2x { /* Clase de Font Awesome para tamaño doble */
+        .fa-2x {
             font-size: 2em;
         }
+        .tech-card {
+            border: none;
+            border-radius: 0.75rem;
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .tech-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+        }
     </style>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html" >
+            <a class="navbar-brand" href="index.html">
                 <img src="/img/logo_ed3.jpeg" alt="Logo" width="120" height="120" class="d-inline-block align-middle">
                 Oke Consulting
             </a>
@@ -29,13 +38,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link "  href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="consultoria.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="consultoria.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Consultoría
                         </a>
                         <ul class="dropdown-menu">
@@ -43,7 +52,7 @@
                             <li><a class="dropdown-item active" aria-current="page" href="tecnologia.html">Tecnología</a></li>                            
                         </ul>
                     </li>
-                     <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="entrenamientos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Entrenamientos
                         </a>
@@ -55,22 +64,94 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contactos.html">Contactos</a>
                     </li>
-                   
                 </ul>
-                
             </div>
         </div>
     </nav>
-    <nav style="--bs-breadcrumb-divider: '->';" aria-label="breadcrumb">
-         <ol class="breadcrumb">
+
+    <nav style="--bs-breadcrumb-divider: '->';" aria-label="breadcrumb" class="bg-white py-2 px-4 border-bottom">
+        <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li> 
             <li class="breadcrumb-item"><a href="consultoria.html">Consultoría</a></li>
-            <li class="breadcrumb-item"><a href="tecnologia.html"></a>Tecnología</li>           
+            <li class="breadcrumb-item active" aria-current="page">Tecnología</li>           
         </ol>
     </nav>
-    <h1>tecnologia!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <div class="container py-5 min-vh-100">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-dark">Consultoría en Tecnología</h1>
+            <p class="lead text-secondary mx-auto col-md-8">
+                Infraestructura eficiente, soporte estratégico y control inteligente de costos tecnológicos para PyMEs y negocios en crecimiento.
+            </p>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <img src="/img/home_p.jpg" class="img-fluid rounded shadow-sm" alt="Tecnología Inteligente">
+            </div>
+            <div class="col-lg-8">
+                <h3 class="h4 text-dark mb-3">La Tecnología como Palanca de Rentabilidad</h3>
+                <p class="text-secondary leading-relaxed">
+                    Muchas pequeñas y medianas empresas enfrentan sobrecostos por licencias innecesarias, sistemas sobredimensionados o, por el contrario, sufren por la falta de herramientas que automaticen tareas repetitivas.
+                </p>
+                <p class="text-secondary leading-relaxed">
+                    En <strong>Oke Consulting</strong> te ayudamos a auditar, simplificar y potenciar tus recursos informáticos. Analizamos si las soluciones de <strong>Software Libre</strong> o plataformas propietarias son las más convenientes para tu presupuesto y modelo de negocio.
+                </p>
+                <div class="p-3 bg-white rounded border-start border-4 border-primary mt-3">
+                    <p class="mb-0 text-dark">
+                        📺 <strong>Conferencia Recomendada:</strong> Conoce más sobre cómo optimizar costos evaluando alternativas de código abierto en nuestra charla sobre <a href="https://youtu.be/RpvSJNXoy-o" target="_blank" class="fw-semibold">Software Libre en YouTube</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Áreas de Servicio Tecnológico -->
+        <h2 class="h3 text-dark text-center mb-4">Nuestros Servicios de Tecnología</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-4 tech-card bg-white">
+                    <div class="badge bg-primary-subtle text-primary fs-4 p-3 rounded-circle mb-3 align-self-start">💻</div>
+                    <h4 class="h5 text-dark">Diagnóstico de Infraestructura</h4>
+                    <p class="text-secondary small mb-0">Evaluación del estado de tus computadoras, redes, servidores y almacenamiento para identificar cuellos de botella.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-4 tech-card bg-white">
+                    <div class="badge bg-success-subtle text-success fs-4 p-3 rounded-circle mb-3 align-self-start">📉</div>
+                    <h4 class="h5 text-dark">Optimización de Costos TI</h4>
+                    <p class="text-secondary small mb-0">Reducción de gastos recurrentes mediante la sustitución inteligente de licencias y consolidación de herramientas.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-4 tech-card bg-white">
+                    <div class="badge bg-warning-subtle text-warning fs-4 p-3 rounded-circle mb-3 align-self-start">☁️</div>
+                    <h4 class="h5 text-dark">Herramientas en la Nube</h4>
+                    <p class="text-secondary small mb-0">Implementación de soluciones colaborativas en la nube para trabajo remoto seguro y acceso móvil.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 p-4 tech-card bg-white">
+                    <div class="badge bg-info-subtle text-info fs-4 p-3 rounded-circle mb-3 align-self-start">🛡️</div>
+                    <h4 class="h5 text-dark">Continuidad y Respaldos</h4>
+                    <p class="text-secondary small mb-0">Políticas de copia de seguridad (backups), protección de datos clave y planes de contingencia ante fallos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner de Contacto -->
+        <div class="text-center py-5 bg-white rounded shadow-sm">
+            <h3 class="h4 text-dark mb-3">¿Deseas auditar y mejorar la tecnología de tu negocio?</h3>
+            <p class="text-secondary mb-4 col-md-8 mx-auto">Te ofrecemos un diagnóstico inicial para evaluar tus oportunidades de ahorro y modernización.</p>
+            <a href="contactos.html" class="btn btn-primary btn-lg px-4">Solicitar Asesoría Tecnológica</a>
+        </div>
     </div>
-    
+
+    <div class="container">
+        <footer class="py-4 my-4 border-top">
+            <p class="text-center text-body-secondary mb-0">&copy; Oke Consulting 2025</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
   </body>
 </html>

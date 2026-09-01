@@ -10,6 +10,8 @@ def deploy_ftp(server, username, password, local_dir, remote_path, exclude_patte
     default_exclude_patterns = [
         '.git/',        # Directorio de Git
         '.github/',     # Directorio de GitHub Actions
+        '.venv/',       # Entorno virtual de Python
+        '.agents/',     # Configuraciones de agentes
         '__pycache__/', # Caché de Python
         '*.pyc',        # Archivos compilados de Python
         '*.DS_Store',   # Archivos de macOS
