@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Modern UI Components - Oke Consulting
+   Modern UI Components - Oke Consulting (Modernized)
    ========================================================================== */
 
 /* Layout Wrapper & Body Protection */
@@ -12,6 +12,8 @@
   margin: 0;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .site-wrapper {
@@ -28,7 +30,8 @@
 /* Navbar Component */
 .oke-navbar {
   background-color: rgba(248, 249, 250, 0.95) !important;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--oke-border-subtle);
   transition: all var(--oke-transition-fast);
 }
@@ -69,6 +72,18 @@
   border-radius: var(--oke-radius-md);
   box-shadow: var(--oke-shadow-md);
   padding: 0.5rem;
+  animation: fadeInDown 0.2s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .oke-navbar .dropdown-item {
@@ -217,19 +232,16 @@
 /* Footer Component */
 .site-footer {
   flex-shrink: 0;
-  padding: 2rem 0;
-  margin-top: 3rem;
+  padding: 2.25rem 0;
+  margin-top: 3.5rem;
   border-top: 1px solid var(--oke-border-subtle);
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
   color: var(--oke-text-muted);
   font-size: 0.95rem;
 }
 
-/* ==========================================================================
-   Error & Work In Progress (WIP) Components
-   ========================================================================== */
-
+/* Status Cards & Error Pages */
 .oke-status-card {
   background-color: var(--oke-surface-light);
   border-radius: var(--oke-radius-lg);
@@ -271,7 +283,7 @@
   color: #664d03;
   border: 1px solid #ffe69c;
   padding: 0.4rem 1rem;
-  border-radius: 2rem;
+  border-radius: var(--oke-radius-full);
   font-weight: 700;
   font-size: 0.9rem;
   margin-bottom: 1.25rem;
@@ -285,10 +297,7 @@
   border: 1px dashed var(--oke-primary);
 }
 
-/* ==========================================================================
-   Accordion & Legal Cards Component
-   ========================================================================== */
-
+/* Accordion Component */
 .oke-accordion .accordion-item {
   border: 1px solid var(--oke-border-subtle);
   border-radius: var(--oke-radius-md) !important;
@@ -324,6 +333,7 @@
   border-top: 1px solid var(--oke-border-subtle);
 }
 
+/* Legal Cards */
 .oke-legal-card {
   background-color: var(--oke-surface-light);
   border-radius: var(--oke-radius-lg);
@@ -337,4 +347,52 @@
   color: var(--oke-primary);
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+/* Modern Back to Top Floating Button */
+.oke-back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--oke-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--oke-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: var(--oke-shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--oke-transition-fast);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.oke-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.oke-back-to-top:hover {
+  background-color: var(--oke-primary-hover);
+  transform: translateY(-3px);
+}
+
+/* Print Stylesheet */
+@media print {
+  .site-header, .site-footer, .oke-back-to-top, .btn, .oke-search-box {
+    display: none !important;
+  }
+  .site-body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .oke-card, .oke-feature-box, .oke-legal-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
 }

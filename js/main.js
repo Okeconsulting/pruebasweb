@@ -1,5 +1,5 @@
 /**
- * Vanilla JavaScript Utilities & Interactive Components - Oke Consulting
+ * Vanilla JavaScript Utilities & Interactive Components - Oke Consulting (Modernized)
  * Zero Node.js / Zero compilation requirements
  */
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +18,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Interactive Contact Form Handler with Feedback
+  // 2. Keyboard Accessibility: Escape key closes mobile navbar and open dropdowns
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (navbarCollapse && navbarCollapse.classList.contains('show') && window.bootstrap) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+      document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+        menu.classList.remove('show');
+      });
+    }
+  });
+
+  // 3. Floating 'Back to Top' Button
+  let backToTopBtn = document.querySelector('.oke-back-to-top');
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'oke-back-to-top';
+    backToTopBtn.setAttribute('aria-label', 'Volver arriba');
+    backToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>';
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // 4. Interactive Contact Form Handler with Feedback
   const contactForm = document.getElementById('okeContactForm');
   const formSuccessAlert = document.getElementById('okeFormSuccessAlert');
 
@@ -42,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Reset Contact Form button
+  // 5. Reset Contact Form button
   const resetFormBtn = document.getElementById('resetFormBtn');
   if (resetFormBtn && contactForm && formSuccessAlert) {
     resetFormBtn.addEventListener('click', () => {
@@ -52,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Client-side Search on 404 Page
+  // 6. Client-side Search on 404 Page
   const searchForm = document.getElementById('okeSearchForm');
   const searchInput = document.getElementById('okeSearchInput');
 
@@ -84,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Work In Progress (WIP) Newsletter Subscription Form
+  // 7. Work In Progress (WIP) Newsletter Subscription Form
   const wipForm = document.getElementById('okeWipForm');
   const wipSuccess = document.getElementById('okeWipSuccess');
 
