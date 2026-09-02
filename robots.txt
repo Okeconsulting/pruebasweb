@@ -1,0 +1,19 @@
+# Robots.txt for Oke Consulting
+# Website: https://okeconsulting.com/
+
+User-agent: *
+Allow: /
+Allow: /img/
+Allow: /css/
+Allow: /js/
+
+# Utility and internal files
+Disallow: /404.html
+Disallow: /500.html
+Disallow: /wip.html
+Disallow: /deployftp.py
+Disallow: /AGENTS.md
+Disallow: /README.md
+
+# XML Sitemap
+Sitemap: https://okeconsulting.com/sitemap.xml

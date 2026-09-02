@@ -3,185 +3,258 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Oke Consulting - Nosotros</title>
+    <title>Sobre Nosotros | Misión y Metodología | Oke Consulting</title>
+    <meta name="description" content="Conoce la misión, valores y metodología de Oke Consulting. Democratizamos la analítica de datos y la tecnología para acompañar el crecimiento de PyMEs.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Oke Consulting">
+    <meta name="theme-color" content="#198754">
+    <link rel="canonical" href="https://okeconsulting.com/nosotros.html">
     <link rel="icon" href="/img/logo_ed3.ico" type="image/x-icon">
-    <style>
-        .btn .fa-solid, .btn .fa-brands {
-            margin-right: .5rem;
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://okeconsulting.com/nosotros.html">
+    <meta property="og:title" content="Sobre Nosotros | Misión y Metodología | Oke Consulting">
+    <meta property="og:description" content="Conoce la misión, valores y metodología de Oke Consulting. Democratizamos la analítica de datos y la tecnología para acompañar el crecimiento de PyMEs.">
+    <meta property="og:image" content="https://okeconsulting.com/img/logo_ed3.jpeg">
+    <meta property="og:site_name" content="Oke Consulting">
+    <meta property="og:locale" content="es_LA">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://okeconsulting.com/nosotros.html">
+    <meta name="twitter:title" content="Sobre Nosotros | Misión y Metodología | Oke Consulting">
+    <meta name="twitter:description" content="Conoce la misión, valores y metodología de Oke Consulting. Democratizamos la analítica de datos y la tecnología para acompañar el crecimiento de PyMEs.">
+    <meta name="twitter:image" content="https://okeconsulting.com/img/logo_ed3.jpeg">
+
+    <!-- Structured Data Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AboutPage",
+          "@id": "https://okeconsulting.com/nosotros.html#webpage",
+          "url": "https://okeconsulting.com/nosotros.html",
+          "name": "Sobre Nosotros | Oke Consulting",
+          "description": "Historia, misión, visión, valores y metodología de trabajo de Oke Consulting.",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://okeconsulting.com/#website",
+            "name": "Oke Consulting",
+            "url": "https://okeconsulting.com/"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://okeconsulting.com/#organization",
+          "name": "Oke Consulting",
+          "url": "https://okeconsulting.com/",
+          "logo": "https://okeconsulting.com/img/logo_ed3.jpeg",
+          "email": "contacto@okeconsulting.com",
+          "description": "Democratizamos la analítica de datos y las herramientas tecnológicas para potenciar a pequeñas y medianas empresas.",
+          "knowsAbout": ["Analítica de Datos", "Inteligencia de Negocios", "Software Libre", "Lean Management", "Liderazgo Empresarial", "Google Sheets"]
         }
-        .fa-2x {
-            font-size: 2em;
-        }
-        .feature-box {
-            padding: 2rem;
-            border-radius: 0.75rem;
-            background-color: #ffffff;
-            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-            height: 100%;
-            transition: transform 0.2s ease;
-        }
-        .feature-box:hover {
-            transform: translateY(-3px);
-        }
-    </style>
+      ]
+    }
+    </script>
+    
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Bootstrap 5.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    
+    <!-- Modern Modular CSS Architecture -->
+    <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body class="bg-light">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <body class="site-body">
+    <div class="site-wrapper">
+    <header class="site-header sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary oke-navbar" aria-label="Navegación Principal">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="/img/logo_ed3.jpeg" alt="Logo" width="120" height="120" class="d-inline-block align-middle">
-                Oke Consulting
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="consultoria.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Consultoría
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="analitics.html">Analitics</a></li>
-                            <li><a class="dropdown-item" href="tecnologia.html">Tecnología</a></li>                            
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="entrenamientos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Entrenamientos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="liderazgo.html">Liderazgo</a></li>
-                            <li><a class="dropdown-item" href="tecnicos.html">Técnicos</a></li>                            
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactos.html">Contactos</a>
-                    </li>
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="/img/logo_ed3.jpeg" alt="Logo de Oke Consulting - Consultoría y Capacitación" class="navbar-brand-logo d-inline-block align-middle me-2">
+            <span class="navbar-brand-text">Oke Consulting</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar menú de navegación">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" href="nosotros.html" aria-current="page">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="consultoria.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Consultoría
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="consultoria.html">Todos los Servicios</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="analitics.html">Analítica de Datos</a></li>
+                  <li><a class="dropdown-item" href="tecnologia.html">Tecnología</a></li>
                 </ul>
-            </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="entrenamientos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Entrenamientos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="entrenamientos.html">Todos los Programas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="liderazgo.html">Liderazgo</a></li>
+                  <li><a class="dropdown-item" href="tecnicos.html">Cursos Técnicos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactos.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-
-    <nav style="--bs-breadcrumb-divider: '->';" aria-label="breadcrumb" class="bg-white py-2 px-4 border-bottom">
-        <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Nosotros</li>            
+      </nav>
+    <nav class="oke-breadcrumb-bar" aria-label="breadcrumb">
+      <div class="container-fluid">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li><li class="breadcrumb-item active" aria-current="page">Nosotros</li>
         </ol>
+      </div>
     </nav>
+    </header>
 
-    <div class="container py-5 min-vh-100">
-        <!-- Hero Section -->
-        <div class="row align-items-center mb-5">
+      <main class="site-main py-4">
+        <div class="container py-5 min-vh-100">
+          
+          <!-- Hero Sobre Nosotros -->
+          <div class="row align-items-center mb-5">
             <div class="col-lg-7">
-                <h1 class="display-5 fw-bold text-dark mb-3">Impulsamos el Potencial de tu Negocio</h1>
-                <p class="lead text-secondary">
-                    En <strong>Oke Consulting</strong> nos dedicamos a tender puentes entre la estrategia empresarial, la tecnología accesible y el desarrollo humano para emprendedores y pequeñas y medianas empresas.
-                </p>
-                <p class="text-secondary">
-                    Creemos firmemente que no se necesitan presupuestos millonarios para tener un control claro de las operaciones. Nuestro objetivo es que cada decisión comercial, productiva y financiera esté respaldada por datos sólidos y guiada por líderes capacitados.
-                </p>
+              <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill fw-bold mb-3">Conoce Nuestra Historia</span>
+              <h1 class="display-5 oke-hero-title mb-3">Democratizamos la analítica y la tecnología para hacer crecer a las PyMEs</h1>
+              <p class="lead text-secondary">
+                En <strong>Oke Consulting</strong> nacimos con una convicción clara: las herramientas más potentes de gestión empresarial, analítica de datos y liderazgo no deberían ser un privilegio exclusivo de las grandes corporaciones.
+              </p>
+              <p class="text-secondary">
+                Los emprendedores, pequeños comercios y empresas medianas son el verdadero motor de la economía. Sin embargo, a menudo se enfrentan a decisiones críticas a ciegas, guiados solo por la intuición y sin un control visual de sus números. Nosotros estamos aquí para cambiar esa realidad, ofreciendo acompañamiento accesible, pragmático y humano.
+              </p>
             </div>
             <div class="col-lg-5 text-center">
-                <img src="/img/logo_ed3.jpeg" alt="Oke Consulting" class="img-fluid rounded shadow p-3 bg-white" style="max-width: 280px;">
+              <img src="/img/logo_ed3.jpeg" alt="Oke Consulting - Identidad y Valores Corporativos" class="img-fluid rounded shadow p-3 bg-white" style="max-width: 280px;">
             </div>
-        </div>
+          </div>
 
-        <!-- Misión, Visión, Valores -->
-        <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="feature-box border-top border-4 border-primary">
-                    <h3 class="h4 text-primary mb-3">Nuestra Misión</h3>
-                    <p class="text-secondary mb-0">
-                        Acompañar a las PyMEs y emprendedores en su proceso de crecimiento, transformando datos dispersos en información estratégica y dotando a sus equipos de habilidades clave de liderazgo y tecnología.
-                    </p>
-                </div>
+          <!-- Misión, Visión, Valores -->
+          <div class="row g-4 mb-5">
+            <div class="col-12 text-center mb-2">
+              <h2 class="h3 text-dark fw-bold">Nuestra Identidad y Pilares</h2>
             </div>
             <div class="col-md-4">
-                <div class="feature-box border-top border-4 border-success">
-                    <h3 class="h4 text-success mb-3">Nuestra Visión</h3>
-                    <p class="text-secondary mb-0">
-                        Ser el aliado de consultoría y formación más confiable para las pequeñas y medianas organizaciones en la región, reconocidos por nuestra cercanía, soluciones a medida y pragmatismo operativo.
-                    </p>
-                </div>
+              <div class="oke-feature-box border-top border-4 border-success">
+                <h3 class="h4 text-success mb-3"><i class="fa-solid fa-bullseye me-2"></i> Nuestra Misión</h3>
+                <p class="text-secondary mb-0">
+                  Acompañar a las PyMEs y emprendedores en su consolidación operativa y comercial, transformando datos dispersos en tableros de control inteligentes y formando a sus colaboradores en habilidades de liderazgo y herramientas tecnológicas de alta productividad.
+                </p>
+              </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-box border-top border-4 border-info">
-                    <h3 class="h4 text-info mb-3">Nuestros Valores</h3>
-                    <ul class="text-secondary list-unstyled mb-0">
-                        <li class="mb-2">&#9733; <strong>Cercanía:</strong> Trabajo codo a codo.</li>
-                        <li class="mb-2">&#9733; <strong>Claridad:</strong> Datos entendibles por todos.</li>
-                        <li class="mb-2">&#9733; <strong>Eficiencia:</strong> Optimización real de costos.</li>
-                        <li>&#9733; <strong>Inspiración:</strong> Liderazgo positivo y formativo.</li>
-                    </ul>
-                </div>
+              <div class="oke-feature-box border-top border-4 border-primary">
+                <h3 class="h4 text-primary mb-3"><i class="fa-solid fa-eye me-2"></i> Nuestra Visión</h3>
+                <p class="text-secondary mb-0">
+                  Ser la consultora de referencia para el ecosistema PyME regional, reconocida por su cercanía humana, soluciones tecnológicas libres de licencias abusivas y resultados medibles en rentabilidad y orden organizativo.
+                </p>
+              </div>
             </div>
-        </div>
+            <div class="col-md-4">
+              <div class="oke-feature-box border-top border-4 border-info">
+                <h3 class="h4 text-info mb-3"><i class="fa-solid fa-gem me-2"></i> Nuestros Valores</h3>
+                <ul class="text-secondary list-unstyled mb-0">
+                  <li class="mb-2">&#9733; <strong>Cercanía:</strong> Trabajamos codo a codo en tu negocio.</li>
+                  <li class="mb-2">&#9733; <strong>Claridad:</strong> Cero tecnicismos confusos; números que todos comprenden.</li>
+                  <li class="mb-2">&#9733; <strong>Eficiencia:</strong> Cuidamos tu presupuesto reduciendo costos innecesarios.</li>
+                  <li>&#9733; <strong>Inspiración:</strong> Liderazgo positivo orientado a motivar y guiar.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-        <!-- Enfoque de Trabajo -->
-        <div class="card border-0 shadow-sm p-4 p-md-5 mb-5 bg-white">
-            <h2 class="h3 text-dark text-center mb-4">¿Cómo Trabajamos con Tu Empresa?</h2>
+          <!-- Metodología de Trabajo en 4 Etapas -->
+          <div class="oke-card p-4 p-md-5 mb-5">
+            <h2 class="h3 text-dark text-center mb-2">Nuestra Metodología de Trabajo</h2>
+            <p class="text-secondary text-center mb-5 col-md-8 mx-auto">Un proceso probado y estructurado para garantizar que cada proyecto genere un retorno de inversión real.</p>
+            
             <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start">
-                        <div class="badge bg-primary fs-5 p-3 rounded-circle me-3">1</div>
-                        <div>
-                            <h4 class="h5 text-dark">Diagnóstico y Entendimiento</h4>
-                            <p class="text-secondary">Escuchamos tus retos cotidianos, conocemos la realidad de tu operación y evaluamos tus fuentes de datos actuales.</p>
-                        </div>
-                    </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="badge bg-success fs-5 p-3 rounded-circle me-3">1</div>
+                  <div>
+                    <h3 class="h5 text-dark fw-bold">Diagnóstico & Entendimiento Profundo</h3>
+                    <p class="text-secondary">Nos sumergimos en tu operación diaria: escuchamos tus desafíos, revisamos cómo registras tus ventas y gastos y detectamos oportunidades inmediatas de mejora.</p>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start">
-                        <div class="badge bg-primary fs-5 p-3 rounded-circle me-3">2</div>
-                        <div>
-                            <h4 class="h5 text-dark">Solución Personalizada</h4>
-                            <p class="text-secondary">Diseñamos tableros, optimizamos tu infraestructura TI o estructuramos planes de capacitación adaptados a tu equipo.</p>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="badge bg-success fs-5 p-3 rounded-circle me-3">2</div>
+                  <div>
+                    <h3 class="h5 text-dark fw-bold">Diseño de Solución a Medida</h3>
+                    <p class="text-secondary">Estructuramos tus bases de datos, diseñamos tableros visuales intuitivos u organizamos el plan de capacitación técnica y de liderazgo adaptado a tu equipo.</p>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start">
-                        <div class="badge bg-primary fs-5 p-3 rounded-circle me-3">3</div>
-                        <div>
-                            <h4 class="h5 text-dark">Implementación y Capacitación</h4>
-                            <p class="text-secondary">Ponemos en marcha las herramientas y formamos a tu personal para garantizar la adopción y autonomía.</p>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="badge bg-success fs-5 p-3 rounded-circle me-3">3</div>
+                  <div>
+                    <h3 class="h5 text-dark fw-bold">Implementación & Capacitación Aplicada</h3>
+                    <p class="text-secondary">Ponemos en marcha las herramientas y entrenamos a tu personal para asegurar que adquieran plena autonomía y confianza en el manejo diario.</p>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="d-flex align-items-start">
-                        <div class="badge bg-primary fs-5 p-3 rounded-circle me-3">4</div>
-                        <div>
-                            <h4 class="h5 text-dark">Seguimiento y Resultados</h4>
-                            <p class="text-secondary">Medimos el impacto en productividad, rentabilidad y toma de decisiones para consolidar el crecimiento continuo.</p>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <div class="badge bg-success fs-5 p-3 rounded-circle me-3">4</div>
+                  <div>
+                    <h3 class="h5 text-dark fw-bold">Seguimiento & Consolidación de Resultados</h3>
+                    <p class="text-secondary">Monitoreamos el impacto en rentabilidad, productividad y toma de decisiones, brindando soporte y ajustes para un crecimiento sostenido.</p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- CTA Section -->
-        <div class="text-center py-4 bg-white rounded shadow-sm">
-            <h3 class="h4 text-dark mb-3">¿Listo para hacer crecer tu organización?</h3>
-            <p class="text-secondary mb-4 col-md-8 mx-auto">Conversa con nuestro equipo y descubre cómo podemos ayudarte a alcanzar el siguiente nivel.</p>
-            <a href="contactos.html" class="btn btn-primary btn-lg px-4">Contáctanos ahora</a>
+          <!-- Banner CTA -->
+          <div class="text-center py-5 bg-white rounded-3 shadow-sm border">
+            <h2 class="h4 text-dark fw-bold mb-3">¿Listo para transformar el rumbo de tu empresa?</h2>
+            <p class="text-secondary mb-4 col-md-8 mx-auto">Conversa hoy mismo con nuestro equipo y descubre cómo podemos ayudarte a tener el control total de tu negocio.</p>
+            <a href="contactos.html" class="btn btn-primary btn-lg px-4 shadow-sm"><i class="fa-solid fa-paper-plane me-2"></i> Solicitar Asesoría Inicial</a>
+          </div>
         </div>
+      </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p class="mb-0">&copy; Oke Consulting 2025 - Soluciones en Analítica, Tecnología y Liderazgo</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item"><a href="faq.html" class="text-secondary text-decoration-none hover-primary me-2"><i class="fa-solid fa-circle-question me-1"></i> Preguntas Frecuentes</a></li>
+              <li class="list-inline-item"><a href="terminos.html" class="text-secondary text-decoration-none hover-primary me-2"><i class="fa-solid fa-shield-halved me-1"></i> Términos & Privacidad</a></li>
+              <li class="list-inline-item"><a href="contactos.html" class="text-secondary text-decoration-none hover-primary"><i class="fa-solid fa-envelope me-1"></i> Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     </div>
 
-    <div class="container">
-        <footer class="py-4 my-4 border-top">
-            <p class="text-center text-body-secondary mb-0">&copy; Oke Consulting 2025</p>
-        </footer>
-    </div>
-
+    <!-- Bootstrap 5.3 Bundle JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- Vanilla JS Helpers -->
+    <script src="/js/main.js"></script>
   </body>
 </html>

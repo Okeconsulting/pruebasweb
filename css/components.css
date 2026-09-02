@@ -1,0 +1,340 @@
+/* ==========================================================================
+   Modern UI Components - Oke Consulting
+   ========================================================================== */
+
+/* Layout Wrapper & Body Protection */
+.site-body {
+  background-color: var(--oke-bg);
+  font-family: var(--oke-font-family);
+  color: var(--oke-dark);
+  line-height: var(--oke-line-height);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.site-main {
+  flex: 1 0 auto;
+}
+
+/* Navbar Component */
+.oke-navbar {
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--oke-border-subtle);
+  transition: all var(--oke-transition-fast);
+}
+
+.navbar-brand-logo {
+  width: var(--oke-logo-size);
+  height: var(--oke-logo-size);
+  object-fit: contain;
+  border-radius: var(--oke-radius-sm);
+  transition: transform var(--oke-transition-fast);
+}
+
+.navbar-brand:hover .navbar-brand-logo {
+  transform: scale(1.02);
+}
+
+.navbar-brand-text {
+  font-weight: 700;
+  color: var(--oke-dark);
+  font-size: 1.5rem;
+}
+
+.oke-navbar .nav-link {
+  font-weight: 500;
+  color: #495057;
+  padding: 0.5rem 1rem;
+  transition: color var(--oke-transition-fast);
+}
+
+.oke-navbar .nav-link:hover,
+.oke-navbar .nav-link.active {
+  color: var(--oke-primary) !important;
+  font-weight: 700;
+}
+
+.oke-navbar .dropdown-menu {
+  border: 1px solid var(--oke-border-subtle);
+  border-radius: var(--oke-radius-md);
+  box-shadow: var(--oke-shadow-md);
+  padding: 0.5rem;
+}
+
+.oke-navbar .dropdown-item {
+  border-radius: var(--oke-radius-sm);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color var(--oke-transition-fast), color var(--oke-transition-fast);
+}
+
+.oke-navbar .dropdown-item:hover,
+.oke-navbar .dropdown-item.active {
+  background-color: var(--oke-primary-subtle);
+  color: var(--oke-primary);
+}
+
+/* Breadcrumb Bar Component */
+.oke-breadcrumb-bar {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--oke-border-subtle);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.oke-breadcrumb-bar .breadcrumb {
+  margin-bottom: 0;
+}
+
+.oke-breadcrumb-bar .breadcrumb-item a {
+  color: var(--oke-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.oke-breadcrumb-bar .breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.oke-breadcrumb-bar .breadcrumb-item.active {
+  color: var(--oke-text-muted);
+}
+
+.oke-breadcrumb-bar .breadcrumb-item + .breadcrumb-item::before {
+  content: "→";
+  color: var(--oke-text-muted);
+  padding: 0 0.5rem;
+}
+
+/* Interactive Cards Component */
+.oke-card {
+  background-color: var(--oke-surface-light);
+  border: none;
+  border-radius: var(--oke-radius-md);
+  box-shadow: var(--oke-shadow-sm);
+  transition: transform var(--oke-transition-fast), box-shadow var(--oke-transition-fast);
+  overflow: hidden;
+  height: 100%;
+}
+
+.oke-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--oke-shadow-md) !important;
+}
+
+.oke-card-img {
+  height: 220px;
+  object-fit: contain;
+  background-color: var(--oke-surface-alt);
+  padding: 1.5rem;
+}
+
+.oke-feature-box {
+  background-color: var(--oke-surface-light);
+  border-radius: var(--oke-radius-md);
+  padding: 2rem;
+  box-shadow: var(--oke-shadow-sm);
+  height: 100%;
+  transition: transform var(--oke-transition-fast), box-shadow var(--oke-transition-fast);
+}
+
+.oke-feature-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--oke-shadow-md);
+}
+
+/* Button & Icon Tokens */
+.btn .fa-solid, 
+.btn .fa-brands,
+.btn .fa-regular {
+  margin-right: 0.5rem;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.btn-primary {
+  background-color: var(--oke-primary);
+  border-color: var(--oke-primary);
+  font-weight: 600;
+  transition: all var(--oke-transition-fast);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--oke-primary-hover);
+  border-color: var(--oke-primary-hover);
+}
+
+.btn-outline-primary {
+  color: var(--oke-primary);
+  border-color: var(--oke-primary);
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--oke-primary);
+  border-color: var(--oke-primary);
+}
+
+/* Hero & Section Typography */
+.oke-hero-title {
+  font-weight: 800;
+  color: var(--oke-dark);
+  letter-spacing: -0.02em;
+}
+
+.oke-section-title {
+  font-weight: 700;
+  color: var(--oke-dark);
+}
+
+/* Form Styles */
+.oke-form-card {
+  background-color: var(--oke-surface-light);
+  border-radius: var(--oke-radius-lg);
+  box-shadow: var(--oke-shadow-sm);
+  padding: 2.5rem;
+}
+
+.oke-form-control:focus {
+  border-color: var(--oke-primary);
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/* Footer Component */
+.site-footer {
+  flex-shrink: 0;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--oke-border-subtle);
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  color: var(--oke-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Error & Work In Progress (WIP) Components
+   ========================================================================== */
+
+.oke-status-card {
+  background-color: var(--oke-surface-light);
+  border-radius: var(--oke-radius-lg);
+  box-shadow: var(--oke-shadow-md);
+  padding: 3rem 2rem;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.oke-status-icon {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.oke-status-code {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+}
+
+.oke-search-box {
+  max-width: 520px;
+  margin: 1.5rem auto;
+}
+
+.oke-quick-links .btn {
+  border-radius: var(--oke-radius-md);
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  margin: 0.35rem;
+}
+
+.oke-wip-badge {
+  display: inline-block;
+  background-color: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffe69c;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.oke-newsletter-box {
+  background-color: var(--oke-surface-alt);
+  border-radius: var(--oke-radius-md);
+  padding: 1.75rem;
+  margin-top: 2rem;
+  border: 1px dashed var(--oke-primary);
+}
+
+/* ==========================================================================
+   Accordion & Legal Cards Component
+   ========================================================================== */
+
+.oke-accordion .accordion-item {
+  border: 1px solid var(--oke-border-subtle);
+  border-radius: var(--oke-radius-md) !important;
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  box-shadow: var(--oke-shadow-sm);
+  background-color: var(--oke-surface-light);
+}
+
+.oke-accordion .accordion-button {
+  font-weight: 600;
+  color: var(--oke-dark);
+  background-color: var(--oke-surface-light);
+  padding: 1.25rem 1.5rem;
+  transition: all var(--oke-transition-fast);
+}
+
+.oke-accordion .accordion-button:not(.collapsed) {
+  color: var(--oke-primary);
+  background-color: var(--oke-primary-subtle);
+  box-shadow: none;
+}
+
+.oke-accordion .accordion-button:focus {
+  border-color: var(--oke-primary);
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.oke-accordion .accordion-body {
+  padding: 1.5rem;
+  color: var(--oke-dark);
+  line-height: var(--oke-line-height);
+  border-top: 1px solid var(--oke-border-subtle);
+}
+
+.oke-legal-card {
+  background-color: var(--oke-surface-light);
+  border-radius: var(--oke-radius-lg);
+  box-shadow: var(--oke-shadow-sm);
+  padding: 3rem 2.5rem;
+}
+
+.oke-legal-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--oke-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

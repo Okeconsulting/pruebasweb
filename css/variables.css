@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Design Tokens & CSS Custom Properties - Oke Consulting
+   ========================================================================== */
+:root {
+  /* Brand Palette */
+  --oke-bg: #e2f9eb;
+  --oke-primary: #198754;
+  --oke-primary-hover: #157347;
+  --oke-primary-subtle: #d1e7dd;
+  --oke-accent-blue: #0d6efd;
+  --oke-dark: #212529;
+  --oke-text-muted: #6c757d;
+  --oke-surface-light: #ffffff;
+  --oke-surface-alt: #f8f9fa;
+  --oke-border-subtle: rgba(0, 0, 0, 0.08);
+
+  /* Typography */
+  --oke-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --oke-line-height: 1.6;
+
+  /* Spacings & Layout */
+  --oke-logo-size: 120px;
+  --oke-radius-sm: 0.375rem;
+  --oke-radius-md: 0.75rem;
+  --oke-radius-lg: 1rem;
+
+  /* Shadows & Elevations */
+  --oke-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  --oke-shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  --oke-shadow-lg: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+
+  /* Transitions */
+  --oke-transition-fast: 0.2s ease;
+  --oke-transition-normal: 0.3s ease;
+}
